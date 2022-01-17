@@ -1,6 +1,6 @@
 function theEFilter(sentences) {
   const arrayWithE = sentences.filter((word) => {
-    return word.includes("e") || word.includes("E");
+    return word.toLowerCase().includes("e");
   });
   return arrayWithE;
   
