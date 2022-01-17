@@ -1,6 +1,6 @@
 function canTakeArtPieces(pieces) {
   
-  return pieces.every((piece) => piece.type === "painting");
+  return pieces.every((pieces) => pieces.type === "painting");
 }
 
   

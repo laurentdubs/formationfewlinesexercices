@@ -1,4 +1,6 @@
 function double(numbers) {
+  
+  return numbers.map((numbers) => numbers * 2);
 
 }
 
