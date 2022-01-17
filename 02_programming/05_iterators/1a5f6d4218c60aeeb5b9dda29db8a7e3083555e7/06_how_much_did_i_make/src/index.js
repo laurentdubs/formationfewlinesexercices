@@ -1,5 +1,8 @@
 function howMuchDidIMake(invoices) {
   // Code here
+  return invoices.filter((invoices) => 
+    invoices.waiter === "Yourself").map((invoices) =>
+    invoices.tip).reduce((a, b) => a + b);
 }
 
 const invoices = [
@@ -7,6 +10,8 @@ const invoices = [
   { clients: 2, waiter: "Dominique", price: 2200, tip: 50 },
   { clients: 2, waiter: "Yourself", price: 2900, tip: 100 },
 ];
+
+console.log(howMuchDidIMake(invoices));
 
 // Do not remove the following line, it is for tests
 module.exports = howMuchDidIMake;
