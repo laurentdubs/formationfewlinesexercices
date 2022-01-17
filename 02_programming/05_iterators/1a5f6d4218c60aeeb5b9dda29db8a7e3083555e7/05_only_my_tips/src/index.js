@@ -1,5 +1,8 @@
 function onlyMyTips(invoices) {
   // Code here
+  return invoices.filter((invoices) => 
+    invoices.waiter === "Yourself").map((invoices) => 
+    invoices.tip);
 }
 
 const todaysInvoices = [
