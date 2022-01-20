@@ -9,11 +9,7 @@ const identityForm = (reader) => {
       reader.question("What is your age ?\n", (age) => {
         console.log(`Your name is ${firstname} ${lastname} and you are ${age}.`);
 
-        //reader.question("What is your first name, last name and your age ?\n", (firstname, lastname, age) => {
-        //console.log(`Your name is ${firstname} ${lastname} and you are ${age}`);
-
         reader.close();
-        //});
       });
     });
   });
