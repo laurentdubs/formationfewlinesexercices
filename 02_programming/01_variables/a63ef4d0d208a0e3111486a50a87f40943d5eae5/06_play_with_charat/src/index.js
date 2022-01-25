@@ -6,4 +6,4 @@ const letterAtThirdPosition = question.charAt(2);
 
 // a constant `letterAtFourthPosition` bound to a string: "The letter at the fourth position is r"
 // using `charAt()` and the previous constant `question`
-const letterAtFourthPosition = question.charAt(3);
+const letterAtFourthPosition = `The letter at the fourth position is ${question.charAt(3)}`;
