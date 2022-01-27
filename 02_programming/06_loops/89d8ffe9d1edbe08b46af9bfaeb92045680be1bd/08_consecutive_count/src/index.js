@@ -15,12 +15,7 @@ function consecutiveCount(word, letter) {
       }
     }
 
-    if (countLetter > countStreakLetter) {
-      countStreakLetter = countLetter;
-    }
-    if (countStreakLetter === 0 && countLetter === 1) {
-      return 1;
-    } else if (countStreakLetter === 0) {
+    if (countStreakLetter === 0) {
       return 0;
     } else {
       return countStreakLetter;
