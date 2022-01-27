@@ -1,36 +1,36 @@
 function numberGame(reader, min = 1, max = 100) {
-  console.log("Welcome! You have to find the right number, between 1 and 100! Good luck!!");
+  console.log("Welcome!\n");
+  console.log("You have to find the right number, between 1 and 100!\n");
+  console.log("Good luck!!");
 
-  const randomNumber = getRamdomNumber(min, max);
+  const RandomNumber = getRandomNumber(min, max);
+  function getRandomNumber(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+  }
 
-  console.log(randomNumber);
-
-  function question() {
-    reader.question("Enter a number\n", (number) => {
-      let userNumber = parseInt(number);
-
-      if (!Number.isInteger(userNumber)) {
+  function WhatIsYourNumber() {
+    reader.question("Enter your number ?\n", (number) => {
+      let chooseNumber = parseInt(number);
+      if (!Number.isInteger(chooseNumber)) {
         console.log("This was not a number");
-        question();
-      } else if (userNumber > max || userNumber < min) {
-        console.log(`The number is between ${min} and ${max}`);
-        question();
-      } else if (userNumber > randomNumber) {
-        console.log("Too high");
-        question();
-      } else if (userNumber < randomNumber) {
+        WhatIsYourNumber();
+      } else if (chooseNumber < min || chooseNumber > max) {
+        console.log("The number is between 1 and 100");
+        WhatIsYourNumber();
+      } else if (chooseNumber < RandomNumber) {
         console.log("Too low");
-        question();
-      } else if (userNumber === randomNumber) {
+        WhatIsYourNumber();
+      } else if (chooseNumber > RandomNumber) {
+        console.log("Too high");
+        WhatIsYourNumber();
+      } else if (chooseNumber === RandomNumber) {
         console.log("You won!");
+        WhatIsYourNumber();
         reader.close();
       }
     });
   }
-  question();
-}
-function getRamdomNumber(min, max) {
-  return Math.round(Math.random() * (max - min) + min);
+  WhatIsYourNumber();
 }
 
 module.exports = numberGame;
