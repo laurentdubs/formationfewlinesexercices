@@ -1,4 +1,4 @@
-const continents: any = [
+const continents: any = [Europe, North America, South America, Asia, Africa, Oceania
   // Replace 'any' type and write your data here.
 ];
 
