@@ -1,4 +1,4 @@
-function lastElementOfArray(array) {
+function lastElementOfArray<ArrayElementType>(array:ArrayElementType[]):ArrayElementType {
   return array[array.length - 1];
 }
 
