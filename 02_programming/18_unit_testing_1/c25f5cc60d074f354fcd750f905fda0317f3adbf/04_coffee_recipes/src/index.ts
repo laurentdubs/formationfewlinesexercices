@@ -25,23 +25,10 @@
      ingredients: ["espresso", "water"],
     },
   ];
+  
   export function giveRecipe(coffee: string): string {
    
-  // for (let i = 0; i < coffeeRecipes.length; i++) {
-    
-    
-  //   if (coffeeRecipes[i].name === name) {
-  //     return `${coffeeRecipes[i].name} ingredients:\n- ${coffeeRecipes[i].ingredients.join(",\n- ")}`;
-  //     //console.log(coffeeRecipes);
-      
-  //   }
-  //   else{
-  //      return `Sorry, ${name} does not exist on our list.`;
-  //     //console.log(name);
-      
-  //   }
-      
-  // }
+  
   const recipe = coffeeRecipes.filter(oneRecipe => oneRecipe.name === coffee);
   
     console.log(recipe,47);
@@ -58,6 +45,6 @@
  
 }
 //giveRecipe("cola");
-console.log(giveRecipe("cola"));
+console.log(giveRecipe("americano"));
 
 

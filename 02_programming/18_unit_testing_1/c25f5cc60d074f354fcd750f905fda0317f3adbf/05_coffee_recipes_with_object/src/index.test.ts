@@ -30,14 +30,14 @@ const expectedCoffeeRecipes: CoffeeRecipe[] = [
 
 describe("#recipeMaker", () => {
   describe("#coffeeRecipes", () => {
-    test("", () => {
+    test("check that coffeeRecipes is as we expect", () => {
       expect.assertions(1);
       expect(expectedCoffeeRecipes).toEqual(recipeMaker.coffeeRecipes);
     });
   });
 
   describe("#giveRecipe", () => {
-    test("", () => {
+    test("check that giveRecipe is a function with one argument", () => {
       expect.assertions(2);
       expect(typeof recipeMaker.giveRecipe).toEqual("function");
       expect(recipeMaker.giveRecipe.length).toEqual(1);
@@ -49,14 +49,14 @@ describe("#recipeMaker", () => {
       expect(typeof recipeMaker.giveRecipe("cola")).toEqual("string");
     });
 
-    test("test text sample", () => {
+    test("it should return a string false if coffee is not found", () => {
       expect.assertions(3);
       expect(recipeMaker.giveRecipe("LATTE")).toEqual("Sorry, LATTE does not exist on our list.");
       expect(recipeMaker.giveRecipe("latt")).toEqual("Sorry, latt does not exist on our list.");
       expect(recipeMaker.giveRecipe("cola")).toEqual("Sorry, cola does not exist on our list.");
     });
 
-    test("dont forget to give a description LOL", () => {
+    test("it should return a string with coffee.name and coffee.ingredients", () => {
       expect.assertions(5);
       recipeMaker.coffeeRecipes.forEach((coffee) => {
         const result = recipeMaker.giveRecipe(coffee.name);
