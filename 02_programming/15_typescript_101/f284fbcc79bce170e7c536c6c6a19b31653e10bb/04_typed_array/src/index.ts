@@ -1,5 +1,5 @@
 // Replace `unkown` values with the right types
-type TeachersList = unknown;
+type TeachersList = string[];
 type YarnTestResults = boolean[];
 type ResultsBulletin = (number | string)[];
 type PairsList = string[][];
