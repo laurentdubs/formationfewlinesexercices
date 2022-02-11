@@ -10,6 +10,4 @@ function findDigit(anArrayOfNumbers:number[], digit:number): number[] {
 findDigit(anArrayOfNumbers, 2);
 console.log(findDigit(anArrayOfNumbers, 2));
 
-//findDigit(anArrayOfNumbers, 3);
-
 export {findDigit};
