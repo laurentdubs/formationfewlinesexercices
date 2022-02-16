@@ -9,10 +9,11 @@ function weatherByZipcode(zipcode: string, countryCode: string):void {
     }else{
      const data = JSON.parse(body);
       console.log(`Weather for ${data.city.name}`);
-     
+
     }
    })
 }
+
 
 function weatherByLatitudeAndLongitude(latitude: number, longitude: number):void {
   // code the function here
