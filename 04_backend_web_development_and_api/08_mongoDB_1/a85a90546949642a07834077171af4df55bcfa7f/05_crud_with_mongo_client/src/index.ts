@@ -1,4 +1,5 @@
 import { MongoClient } from "mongodb";
+import { deleteManyCountries } from "./deleteManyCountries";
 
 import { showCollections } from "./showCollections";
 
@@ -9,7 +10,7 @@ client.connect().then((client) => {
   const db = client.db();
 
   // You can test your query function by placing it here instead of `showCollections`
-  showCollections(db)
+  deleteManyCountries(db)
     .then((result) => console.log(result))
     .then(() => client.close());
 });
