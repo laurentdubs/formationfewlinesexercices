@@ -18,7 +18,3 @@ const countryTwo = {
 };
 
 db.worldAtlas.insertMany([newCountry, countryOne, countryTwo]);
-
-db.worldAtlas.insertMany({ name: { $eq: "France" } });
-db.worldAtlas.insertMany({ capital: { $eq: "Paris" } });
-db.worldAtlas.insertMany({ continent: { $eq: "Europe" } });
