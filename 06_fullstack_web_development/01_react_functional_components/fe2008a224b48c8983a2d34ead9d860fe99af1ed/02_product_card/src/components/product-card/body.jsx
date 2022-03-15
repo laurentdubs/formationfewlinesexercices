@@ -5,9 +5,9 @@ const CardBody = (props) => {
   function showOffScreen() {
     if (showScreenshots === false) {
       setShowScreenshots(
-        props.screenshots.map((element) => {
+        props.screenshots.map((element, index) => {
           // eslint-disable-next-line react/jsx-key
-          return <img src={element.url}></img>;
+          return <img index={index} src={element.url}></img>;
         }),
       );
     } else {
@@ -19,11 +19,20 @@ const CardBody = (props) => {
       <img src={props.cover}></img>
       <p>{props.summary}</p>
       <p>{props.firstReleaseDate}</p>
-      {props.genres.map((element) => {
+      {props.genres.map((element, index) => {
         if (element.name === undefined) {
-          return <p>{element}</p>;
+          return (
+            <p>
+              key={index} {element}
+            </p>
+          );
         } else {
-          return <p>{element.name} </p>;
+          return (
+            <p>
+              key={index}
+              {element.name}{" "}
+            </p>
+          );
         }
       })}
       <button onClick={showOffScreen}>Show Screenshots</button>
